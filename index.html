@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Alfabeto ASL por cámara</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="pantalla-permiso">
+    <h1>Alfabeto ASL por cámara</h1>
+    <p>Necesito permiso de cámara para reconocer las señas. Funciona en la
+       computadora o en el celular, directo desde el navegador.</p>
+    <button id="btn-iniciar">Activar cámara</button>
+    <p id="texto-error" class="oculto"></p>
+  </div>
+
+  <div id="app" class="oculto">
+    <div id="contenedor-video">
+      <video id="video" autoplay playsinline muted></video>
+      <canvas id="overlay"></canvas>
+    </div>
+
+    <div id="panel-lateral">
+      <div id="barra-superior">
+        <span id="etiqueta-letra">-</span>
+        <div id="barra-progreso"><div id="barra-progreso-relleno"></div></div>
+      </div>
+
+      <div id="barra-inferior">
+        <div id="palabra">&nbsp;</div>
+        <div id="botones">
+          <button id="btn-espacio">␣ Espacio</button>
+          <button id="btn-borrar">⌫ Borrar</button>
+          <button id="btn-limpiar">✕ Limpiar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
